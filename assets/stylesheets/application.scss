@@ -28,6 +28,7 @@ body {
 }
 
 .active-city {
+  position: relative;
   background-color: $background_light;
   width: 80%;
   color: $text;
@@ -35,8 +36,9 @@ body {
   border-top-right-radius: $border_radius;
   border-bottom-right-radius: $border_radius;
   .city-photo {
-    width: 100%;
+    width: 95%;
     margin-top: 25px;
+    position: absolute;
   }
   h3 {
     margin-top: 0;
@@ -63,4 +65,10 @@ body {
   padding: 3px 15px;
   // border: 1px solid #ddd;
   // border-radius: 4px;
+}
+
+.loading-message {
+  position: absolute;
+  top: 122px;
+  z-index: 0;
 }

@@ -21,6 +21,9 @@ class ActiveCity extends Component {
       <div className="active-city">
         <h3>{selectedCity.name}</h3>
         <p>{selectedCity.address}</p>
+        <div className="loading-message">
+        <p>Loading image...</p>
+        </div>
         <img className="city-photo" src={endpoint + selectedCity.slug}
           alt={`photo of ${selectedCity.name} campus`}
         />
