@@ -12,9 +12,7 @@ class CityList extends Component {
   }
 
   renderList() {
-    console.log(this.props);
-    const { cities } = this.props;
-    console.log(cities);
+    const { cities } = this.props; // from redux state tree
     return cities.map((city, index) => {
       return (
         <City city={city} key={index} />
@@ -24,7 +22,7 @@ class CityList extends Component {
 
   render() {
     return (
-      <div className="city-list">
+      <div className="cities">
         {this.renderList()}
       </div>
     );
