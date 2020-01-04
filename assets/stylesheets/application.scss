@@ -1,24 +1,46 @@
+$accent: #ff096c;
+$text: #415248;
+
+$background: #f4b2aa;
+$background_light: #f4d4b8;
+$background_lighter: #bcc5af;
+$border_radius: 5px;
+
 body {
   font-family: Helvetica;
+  background-color: $background;
 }
+
 .app {
-  height: 95vh;
+  // height: 95vh;
   margin-top: 20px;
   margin-bottom: 20px;
   display: flex;
-  .cities {
-    width: 30%;
+}
+
+.cities {
+  padding: 20px 20px;
+  width: 20%;
+  color: $text;
+  background-color: $background_lighter;
+  border-top-left-radius: $border_radius;
+  border-bottom-left-radius: $border_radius;
+}
+
+.active-city {
+  background-color: $background_light;
+  width: 80%;
+  color: $text;
+  padding: 20px 15px;
+  border-top-right-radius: $border_radius;
+  border-bottom-right-radius: $border_radius;
+  .city-photo {
+    width: 100%;
+    margin-top: 25px;
   }
-  .active-city {
-    width: 70%;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    padding: 10px 15px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    h3 {
-      margin-top: 0;
-    }
+  h3 {
+    margin-top: 0;
+    color: $accent;
   }
 }
 
@@ -29,4 +51,16 @@ body {
 .city-item {
   background-color: transparent;
   cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.selected {
+  transition: 0.3s;
+  color: $accent;
+  padding-left: 8px;
+  padding: 3px 15px;
+  // border: 1px solid #ddd;
+  // border-radius: 4px;
 }

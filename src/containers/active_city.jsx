@@ -5,15 +5,25 @@ import { bindActionCreators } from 'redux';
 class ActiveCity extends Component {
 
   render() {
-
-    console.log(this.props);
     const { selectedCity } = this.props;
 
+    if (!selectedCity) {
+      return (
+        <div className="active-city">
+          <p>Select a city...</p>
+        </div>
+      );
+    }
+
+    const endpoint = 'https://kitt.lewagon.com/placeholder/cities/';
+
     return (
-      <div className='active-city'>
-        { selectedCity &&  // only renders this part if selectedCity exists (cool trick)
-          <p>{selectedCity.name}</p>
-        }
+      <div className="active-city">
+        <h3>{selectedCity.name}</h3>
+        <p>{selectedCity.address}</p>
+        <img className="city-photo" src={endpoint + selectedCity.slug}
+          alt={`photo of ${selectedCity.name} campus`}
+        />
       </div>
     );
   }

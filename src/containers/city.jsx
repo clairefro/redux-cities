@@ -14,7 +14,7 @@ class City extends Component {
 
     let classes = "city-item";
     if (city === this.props.selectedCity) {
-      classes += " active-city";
+      classes += " selected";
     }
 
     return (
