@@ -14,7 +14,12 @@ const cities = [
 const App = () => {
   return (
     <div className="app">
-      <CityList cities={cities} />
+      <div className="container">
+        <CityList cities={cities} />
+        <div className="active-city">
+          active city will go here
+        </div>
+      </div>
     </div>
   );
 };

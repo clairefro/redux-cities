@@ -2,6 +2,7 @@ body {
   font-family: Helvetica;
 }
 .app {
+  height: 95vh;
   margin-top: 20px;
   margin-bottom: 20px;
   display: flex;
@@ -21,7 +22,15 @@ body {
   }
 }
 
-.list-group-item {
+.container {
+  display: flex;
+}
+
+.city-item {
   background-color: transparent;
   cursor: pointer;
+}
+
+.city-list {
+  width: 30%;
 }
